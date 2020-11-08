@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Node_js_Calculator_201800638</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900&displau=swap');
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto',sans-serif;
+    }
+    body
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: rgb(0, 0, 0);
+    }
+    .calculator
+    {
+      position: relative;
+      display: grid;
+    }
+    .calculator .value{
+      grid-column: span 4;
+      height: 60px;
+      text-align: right;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 18px;
+    }
+    .calculator span{
+      display: grid;
+      width: 60px;
+      height: 60px;
+      color: #fff;
+      background: #0c2835;
+      place-items: center;
+      border: 3px solid rgba(65, 0, 90, 0.493);
+    }
+    .calculator span:active{
+
+      color: #111;
+    }
+    .calculator span.clear{
+      grid-column: span 2;
+      width: 122px;
+      height: 58px;
+    
+    }
+    .calculator span.plus{
+      grid-row: span 2;
+      height: 120px;
+    }
+    .calculator button.equal{
+      color: white;
+      background: #111;
+    }
+  </style>
+  <script language="javascript" type="text/javascript">
+
+  /* Creating function to calculate factorial of element */
+  function calculate(calc) {
+
+      document.calc.txt.value = eval(document.calc.txt.value);
+  }
+  
+  </script>
+</head>
+
+<body>
+
+  <form action="/" method="post" class="calculator" name ="calc">
+    <input class="value" type ="text" name="txt" readonly="">
+    <span class="num clear" onclick="document.calc.txt.value =''">c</span>
+    <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+    <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+    <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+    <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+    <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+    <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+    <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+    <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+    <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+    <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+    <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+    <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+    <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+    <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+    <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+    <span class="num" onclick="document.calc.txt.value +='.'">.</span>
+    <button class="num equal"type="submit" id="submitbutton"onclick="calculate(this.form)">=</button>
+  </form>
+
+</body>
+</html>
